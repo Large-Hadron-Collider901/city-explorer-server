@@ -13,7 +13,7 @@ const weatherData = [];
 
 app.get("/weather", async (req, res) => {
   try {
-    const weatherApiKey = process.env.REACT_APP_WEATHER_API_KEY;
+    const weatherApiKey = `06c93a49c5ad485ba7cfba684859337a`;
     const lat = req.query.lat;
     const lon = req.query.lon;
     const result = await axios.get(`https://api.weatherbit.io/v2.0/forecast/daily/?key=${weatherApiKey}&lang=en&lat=${lat}&lon=${lon}&units=I&days=5`);
